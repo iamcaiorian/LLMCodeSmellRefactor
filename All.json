@@ -1,7 +1,7 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:42:06.271-03:00",
+  "timestamp": "2025-01-07T15:45:32.845-03:00",
   "files": [
     {
       "filename": ".\\src\\main\\java\\org\\example\\studycards\\LeitnerSystem.java",
@@ -160,22 +160,6 @@
           "ruleset": "Design",
           "priority": 3,
           "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#excessiveparameterlist"
-        }
-      ]
-    },
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studysearch\\SearchLog.java",
-      "violations": [
-        {
-          "beginline": 8,
-          "begincolumn": 8,
-          "endline": 8,
-          "endcolumn": 13,
-          "description": "The class \u0027SearchLog\u0027 is suspected to be a Data Class (WOC\u003d27.273%, NOPA\u003d0, NOAM\u003d8, WMC\u003d12)",
-          "rule": "DataClass",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#dataclass"
         }
       ]
     }
