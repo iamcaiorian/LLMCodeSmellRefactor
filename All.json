@@ -1,7 +1,7 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:56:45.458-03:00",
+  "timestamp": "2025-01-07T15:58:44.162-03:00",
   "files": [
     {
       "filename": ".\\src\\main\\java\\org\\example\\studymaterial\\AudioReference.java",
@@ -44,22 +44,6 @@
           "endline": 29,
           "endcolumn": 33,
           "description": "The method \u0027setGoalSummary()\u0027 has a NCSS line count of 19.",
-          "rule": "NcssCount",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#ncsscount"
-        }
-      ]
-    },
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studyregistry\\StudyMaterial.java",
-      "violations": [
-        {
-          "beginline": 61,
-          "begincolumn": 33,
-          "endline": 61,
-          "endcolumn": 53,
-          "description": "The method \u0027getReferenceCountMap()\u0027 has a NCSS line count of 21.",
           "rule": "NcssCount",
           "ruleset": "Design",
           "priority": 3,
