@@ -5,8 +5,8 @@ public class Card {
     private String answer;
 
     public Card(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
+        validateAndSetQuestion(question);
+        validateAndSetAnswer(answer);
     }
 
     public String getQuestion() {
@@ -14,7 +14,7 @@ public class Card {
     }
 
     public void setQuestion(String question) {
-        this.question = question;
+        validateAndSetQuestion(question);
     }
 
     public String getAnswer() {
@@ -22,11 +22,43 @@ public class Card {
     }
 
     public void setAnswer(String answer) {
-        this.answer = answer;
+        validateAndSetAnswer(answer);
     }
 
     public void edit(String question, String answer) {
-        setQuestion(question);
-        setAnswer(answer);
+        validateAndSetQuestion(question);
+        validateAndSetAnswer(answer);
+    }
+
+    private void validateAndSetQuestion(String question) {
+        if (question == null || question.trim().isEmpty()) {
+            throw new IllegalArgumentException("Question cannot be empty or null");
+        }
+        this.question = question.trim();
+    }
+
+    private void validateAndSetAnswer(String answer) {
+        if (answer == null || answer.trim().isEmpty()) {
+            throw new IllegalArgumentException("Answer cannot be empty or null");
+        }
+        this.answer = answer.trim();
+    }
+
+    public boolean isCorrectAnswer(String attemptedAnswer) {
+        return answer != null && answer.trim().equalsIgnoreCase(attemptedAnswer.trim());
+    }
+
+    public boolean containsKeyword(String keyword) {
+        if (keyword == null || keyword.trim().isEmpty()) {
+            return false;
+        }
+
+        String lowercaseKeyword = keyword.toLowerCase().trim();
+        return question.toLowerCase().contains(lowercaseKeyword) || answer.toLowerCase().contains(lowercaseKeyword);
+    }
+
+    @Override
+    public String toString() {
+        return "Card{Question='" + question + "'}";
     }
 }
