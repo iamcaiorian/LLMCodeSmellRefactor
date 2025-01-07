@@ -1,7 +1,7 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:35:05.816-03:00",
+  "timestamp": "2025-01-07T15:38:29.029-03:00",
   "files": [
     {
       "filename": ".\\src\\main\\java\\org\\example\\studycards\\LeitnerSystem.java",
@@ -64,22 +64,6 @@
           "ruleset": "Design",
           "priority": 3,
           "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#ncsscount"
-        }
-      ]
-    },
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studyplanner\\ToDo.java",
-      "violations": [
-        {
-          "beginline": 5,
-          "begincolumn": 8,
-          "endline": 5,
-          "endcolumn": 13,
-          "description": "The class \u0027ToDo\u0027 is suspected to be a Data Class (WOC\u003d11.111%, NOPA\u003d0, NOAM\u003d8, WMC\u003d10)",
-          "rule": "DataClass",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#dataclass"
         }
       ]
     },
