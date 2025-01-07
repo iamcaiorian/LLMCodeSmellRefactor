@@ -1,7 +1,7 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:24:54.771-03:00",
+  "timestamp": "2025-01-07T15:35:05.816-03:00",
   "files": [
     {
       "filename": ".\\src\\main\\java\\org\\example\\studycards\\LeitnerSystem.java",
@@ -23,31 +23,15 @@
       "filename": ".\\src\\main\\java\\org\\example\\studymaterial\\AudioReference.java",
       "violations": [
         {
-          "beginline": 33,
-          "begincolumn": 27,
-          "endline": 33,
-          "endcolumn": 223,
+          "beginline": 34,
+          "begincolumn": 26,
+          "endline": 36,
+          "endcolumn": 42,
           "description": "Avoid long parameter lists.",
           "rule": "ExcessiveParameterList",
           "ruleset": "Design",
           "priority": 3,
           "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#excessiveparameterlist"
-        }
-      ]
-    },
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studymaterial\\Reference.java",
-      "violations": [
-        {
-          "beginline": 3,
-          "begincolumn": 17,
-          "endline": 3,
-          "endcolumn": 22,
-          "description": "The class \u0027Reference\u0027 is suspected to be a Data Class (WOC\u003d4.545%, NOPA\u003d0, NOAM\u003d21, WMC\u003d22)",
-          "rule": "DataClass",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#dataclass"
         }
       ]
     },
