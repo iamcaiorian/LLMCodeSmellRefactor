@@ -1,7 +1,7 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:51:41.310-03:00",
+  "timestamp": "2025-01-07T15:54:24.826-03:00",
   "files": [
     {
       "filename": ".\\src\\main\\java\\org\\example\\studymaterial\\AudioReference.java",
@@ -32,22 +32,6 @@
           "ruleset": "Design",
           "priority": 3,
           "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#excessiveparameterlist"
-        }
-      ]
-    },
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studyplanner\\KanbanView.java",
-      "violations": [
-        {
-          "beginline": 77,
-          "begincolumn": 19,
-          "endline": 77,
-          "endcolumn": 29,
-          "description": "The method \u0027kanbanView()\u0027 has a NCSS line count of 31.",
-          "rule": "NcssCount",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#ncsscount"
         }
       ]
     },
