@@ -1,24 +1,8 @@
 {
   "formatVersion": 0,
   "pmdVersion": "7.9.0",
-  "timestamp": "2025-01-07T15:45:32.845-03:00",
+  "timestamp": "2025-01-07T15:51:41.310-03:00",
   "files": [
-    {
-      "filename": ".\\src\\main\\java\\org\\example\\studycards\\LeitnerSystem.java",
-      "violations": [
-        {
-          "beginline": 44,
-          "begincolumn": 19,
-          "endline": 44,
-          "endcolumn": 32,
-          "description": "The method \u0027getRandomCard(List\u003cBox\u003e)\u0027 has a NCSS line count of 17.",
-          "rule": "NcssCount",
-          "ruleset": "Design",
-          "priority": 3,
-          "externalInfoUrl": "https://docs.pmd-code.org/pmd-doc-7.9.0/pmd_rules_java_design.html#ncsscount"
-        }
-      ]
-    },
     {
       "filename": ".\\src\\main\\java\\org\\example\\studymaterial\\AudioReference.java",
       "violations": [
