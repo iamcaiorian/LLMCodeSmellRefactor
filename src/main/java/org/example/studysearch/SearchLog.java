@@ -1,5 +1,7 @@
 package org.example.studysearch;
 
+import org.example.studyregistry.StudyMaterial;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +37,15 @@ public class SearchLog {
         addSearchHistory(text);
         setNumUsages(getNumUsages() + 1);
         results.add("\nLogged in: " + getLogName());
+        return results;
+    }
+
+    public List<String> handleMaterialSearch(String text) {
+        List<String> results = new ArrayList<>();
+        results.addAll(StudyMaterial.getStudyMaterial().searchInMaterials(text));
+        this.addSearchHistory(text);
+        this.setNumUsages(this.getNumUsages() + 1);
+        results.add("\nLogged in: " + this.getLogName());
         return results;
     }
 
