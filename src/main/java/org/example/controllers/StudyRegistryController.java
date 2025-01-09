@@ -98,11 +98,26 @@ public class StudyRegistryController {
         handleMethodHeader("(Study Plan Edit)");
         System.out.println("Type the following info: String firstStep, String resetStudyMechanism, String consistentStep, " +
                 "String seasonalSteps, String basicSteps, String mainObjectiveTitle, String mainGoalTitle, String mainMaterialTopic, " +
-                "String mainTask, @NotNull  Integer numberOfSteps, boolean isImportant. " +
+                "String mainTask, @NotNull Integer numberOfSteps, boolean isImportant. " +
                 "The Date to start is today, the date to end is x days from now, type the quantity of days\n");
+
         LocalDateTime createdAT = LocalDateTime.now();
-        studyPlan.assignSteps(getInput(), getInput(), getInput(), getInput(), getInput(), getInput(), getInput(), getInput(), getInput(),
-                Integer.parseInt(getInput()), Boolean.parseBoolean(getInput()), createdAT, createdAT.plusDays(Long.parseLong(getInput())));
+        StudyPlan.StepDetails stepDetails = new StudyPlan.StepDetails()
+                .setFirstStep(getInput())
+                .setResetStudyMechanism(getInput())
+                .setConsistentStep(getInput())
+                .setSeasonalSteps(getInput())
+                .setBasicSteps(getInput())
+                .setMainObjectiveTitle(getInput())
+                .setMainGoalTitle(getInput())
+                .setMainMaterialTopic(getInput())
+                .setMainTask(getInput())
+                .setNumberOfSteps(Integer.parseInt(getInput()))
+                .setImportant(Boolean.parseBoolean(getInput()))
+                .setStartDate(createdAT)
+                .setEndDate(createdAT.plusDays(Long.parseLong(getInput())));
+
+        studyPlan.assignSteps(stepDetails);
     }
 
     private StudyGoal getStudyGoalInfo() {
