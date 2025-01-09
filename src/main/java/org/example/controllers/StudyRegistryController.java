@@ -57,9 +57,20 @@ public class StudyRegistryController {
                 "Integer practicedDays, int day, int month, int year, String name, String title, String description, " +
                 "String topic, String objectiveInOneLine, String objectiveFullDescription, String motivation, " +
                 "Double duration, boolean isActive  \n");
-        objective.handleSetObjective(Integer.parseInt(getInput()), Integer.parseInt(getInput()), Integer.parseInt(getInput()), Integer.parseInt(getInput()), Integer.parseInt(getInput()),
-                Integer.parseInt(getInput()), getInput(), getInput(), getInput(), getInput(), getInput(), getInput(), getInput(),
-                Double.parseDouble(getInput()), Boolean.parseBoolean(getInput()));
+
+        StudyObjective.TimeDetails timeDetails = new StudyObjective.TimeDetails(
+                Integer.parseInt(getInput()), Integer.parseInt(getInput()), Integer.parseInt(getInput()), Integer.parseInt(getInput()), Double.parseDouble(getInput())
+        );
+
+        StudyObjective.TextualInfo textualInfo = new StudyObjective.TextualInfo(
+                getInput(), getInput(), getInput(), getInput(), getInput(), getInput(), getInput()
+        );
+
+        StudyObjective.ObjectiveDetails details = new StudyObjective.ObjectiveDetails(
+                Integer.parseInt(getInput()), Integer.parseInt(getInput()), timeDetails, textualInfo
+        );
+
+        objective.handleSetObjective(details, Boolean.parseBoolean(getInput()));
     }
 
     private StudyObjective getStudyObjectiveInfo() {
