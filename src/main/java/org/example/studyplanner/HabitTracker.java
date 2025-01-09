@@ -58,9 +58,8 @@ public class HabitTracker {
         return this.tracker.keySet().stream().toList();
     }
 
-    public int addHabit(String name, String motivation, Integer dailyMinutesDedication, Integer dailyHoursDedication, Integer year, Integer month, Integer day, Integer hour, Integer minute, Integer seconds, Boolean isConcluded) {
+    public int addHabit(String name, String motivation, Integer dailyMinutesDedication, Integer dailyHoursDedication, LocalDateTime startDate, Boolean isConcluded) {
         LocalTime lt = LocalTime.of(dailyHoursDedication, dailyMinutesDedication);
-        LocalDateTime startDate = LocalDateTime.of(year, month, day, hour, minute, seconds);
         Habit habit = new Habit(name, motivation, lt, this.nextId, startDate, isConcluded);
         this.habits.add(habit);
         int response = nextId;
@@ -70,7 +69,8 @@ public class HabitTracker {
     }
 
     public int handleAddHabitAdapter(List<String> stringProperties, List<Integer> intProperties, boolean isConcluded){
-        return addHabit(stringProperties.get(0), stringProperties.get(1), intProperties.get(0), intProperties.get(1), intProperties.get(2), intProperties.get(3), intProperties.get(4), intProperties.get(5), intProperties.get(6), intProperties.get(7), isConcluded);
+        LocalDateTime startDate = LocalDateTime.of(intProperties.get(2), intProperties.get(3), intProperties.get(4), intProperties.get(5), intProperties.get(6), intProperties.get(7));
+        return addHabit(stringProperties.get(0), stringProperties.get(1), intProperties.get(0), intProperties.get(1), startDate, isConcluded);
     }
 
     public int addHabit(String name, String motivation) {
